@@ -25,7 +25,7 @@ def countdown(focus_duration):
 
 if __name__ == "__main__":
     session_count = 0
-    focus_duration, total_duration, break_duration = user_input()
+    focus_duration, break_duration, total_duration = user_input()
     while session_count < total_duration:
         playsound(r'Sicko mode.mp3')
         countdown(focus_duration)
