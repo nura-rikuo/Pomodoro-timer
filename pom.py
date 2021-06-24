@@ -11,17 +11,18 @@ def user_input():
     return focus_duration, break_duration, total_duration
 
 
-def countdown(focus_duration):
-    for j in range(focus_duration-1,-1,-1):
+def countdown(interval):
+    for j in range(interval-1,-1,-1):
         for i in range(59,-1,-1):
             if i <= 9:
                 sys.stdout.write \
-                (f'\rDuration: {j} Minutes {i} seconds to go')
+                (f'\rDuration: Minutes {j} Seconds 0{i} to go')
             else:
                 sys.stdout.write \
-                (f'\rDuration: {j} Minutes {i} seconds to go')
+                (f'\rDuration: Minutes {j} Seconds {i} to go')
                 
             time.sleep(1)
+            sys.stdout.flush()
 
 if __name__ == "__main__":
     session_count = 0
